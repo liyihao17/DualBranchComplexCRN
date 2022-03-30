@@ -1,0 +1,595 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Scale-Aware Dual-Branch Complex Convolutional Recurrent Network for Monaural Speech Enhancement</title>
+  <link rel="stylesheet" type="text/css" href="./stylesheets/github-light.css">
+</head>
+
+<body>
+  <article>
+    <header>
+      <h1>Samples from "Scale-Aware Dual-Branch Complex Convolutional Recurrent Network for Monaural Speech Enhancement"</h1>
+    </header>
+  </article>
+
+  <div><b>Authors:</b> Yihao Li, Meng Sun, Xiongwei Zhang and Hugo Van hamme
+  </div>
+
+  <a href="https://www.baidu.com">Code: waiting for upload</a>
+  <hr style="height:1px;border:none;border-top:1px solid #555555; width:130%">
+  <h2>p232 (original version)</h2>
+
+  <style type="text/css">
+    .tg {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    .tg td {
+      border-bottom-width: 1px;
+      border-color: black;
+      border-style: solid;
+      border-top-width: 1px;
+      border-width: 0px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      overflow: hidden;
+      padding: 10px 5px;
+      word-break: normal;
+    }
+
+    .tg th {
+      border-bottom-width: 1px;
+      border-color: black;
+      border-style: solid;
+      border-top-width: 1px;
+      border-width: 0px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      overflow: hidden;
+      padding: 10px 5px;
+      word-break: normal;
+    }
+
+    .tg .tg-c3ow {
+      border-color: inherit;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: top
+    }
+
+    .tg .tg-0pky {
+      border-color: inherit;
+      text-align: center;
+      vertical-align: top
+    }
+
+    .tg .tg-pcvp {
+      border-color: inherit;
+      text-align: center;
+      vertical-align: top
+    }
+
+    .tg .tg-ihkz {
+      border-color: inherit;
+      text-align: center;
+      vertical-align: top
+    }
+
+    .tg .tg-7kms {
+      border-color: inherit;
+      font-family: Arial, Helvetica, sans-serif !important;
+      ;
+      text-align: center;
+      vertical-align: top
+    }
+  </style>
+  <table class="tg" style="undefined;table-layout: fixed; width: 493px">
+    <colgroup>
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="tg-c3ow"> </th>
+        <th class="tg-c3ow">p232_005</th>
+        <th class="tg-c3ow">p232_032</th>
+        <th class="tg-c3ow">p232_117</th>
+        <th class="tg-c3ow">p232_160</th>
+        <th class="tg-c3ow">p232_267.wav</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-pcvp">Noisy</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/noisy/p232_005.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/noisy/p232_032.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/noisy/p232_117.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/noisy/p232_160.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/noisy/p232_267.wav"></audio></td>
+      </tr>
+       <tr>
+        <td class="tg-pcvp">Clean</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/clean/p232_005.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/clean/p232_032.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/clean/p232_117.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/clean/p232_160.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/clean/p232_267.wav"></audio></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="tg" style="undefined;table-layout: fixed; width: 493px">
+<h2>DCCRN-p232</h2>
+    <colgroup>
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="tg-c3ow">Model </th>
+        <th class="tg-c3ow">p232_005</th>
+        <th class="tg-c3ow">p232_032</th>
+        <th class="tg-c3ow">p232_117</th>
+        <th class="tg-c3ow">p232_160</th>
+        <th class="tg-c3ow">p232_267.wav</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-pcvp">DCCRN with SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SNR_p232_005.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SNR_p232_032.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SNR_p232_117.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SNR_p232_160.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SNR_p232_267.wav"></audio></td>
+      </tr>
+    <tr>
+        <td class="tg-pcvp">DCCRN with SI-SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI_p232_005.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI_p232_032.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI_p232_117.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI_p232_160.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI_p232_267.wav"></audio></td>
+      </tr>
+   <tr>
+        <td class="tg-pcvp">DCCRN with OSI-SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_OSI_p232_005.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_OSI_p232_032.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_OSI_p232_117.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_OSI_p232_160.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_OSI_p232_267.wav"></audio></td>
+      </tr>
+   <tr>
+        <td class="tg-pcvp">DCCRN with SI-SNR+L1 loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+L1_p232_005.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+L1_p232_032.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+L1_p232_117.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+L1_p232_160.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+L1_p232_267.wav"></audio></td>
+      </tr>
+   <tr>
+        <td class="tg-pcvp">DCCRN with SI-SNR+EC loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+EC_p232_005.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+EC_p232_032.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+EC_p232_117.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+EC_p232_160.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+EC_p232_267.wav"></audio></td>
+      </tr>
+    <tr>
+        <td class="tg-pcvp">DCCRN with SA-SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SA_p232_005.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SA_p232_032.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SA_p232_117.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SA_p232_160.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SA_p232_267.wav"></audio></td>
+      </tr>
+    </tbody>
+  </table>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 493px">
+<h2>DBCCRN-p232</h2>
+    <colgroup>
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="tg-c3ow">Model </th>
+        <th class="tg-c3ow">p232_005</th>
+        <th class="tg-c3ow">p232_032</th>
+        <th class="tg-c3ow">p232_117</th>
+        <th class="tg-c3ow">p232_160</th>
+        <th class="tg-c3ow">p232_267.wav</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-pcvp">DBCCRN with SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SNR_p232_005.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SNR_p232_032.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SNR_p232_117.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SNR_p232_160.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SNR_p232_267.wav"></audio></td>
+      </tr>
+    <tr>
+        <td class="tg-pcvp">DBCCRN with SI-SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI_p232_005.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI_p232_032.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI_p232_117.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI_p232_160.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI_p232_267.wav"></audio></td>
+      </tr>
+   <tr>
+        <td class="tg-pcvp">DBCCRN with OSI-SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_OSI_p232_005.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_OSI_p232_032.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_OSI_p232_117.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_OSI_p232_160.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_OSI_p232_267.wav"></audio></td>
+      </tr>
+   <tr>
+        <td class="tg-pcvp">DBCCRN with SI-SNR+L1 loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+L1_p232_005.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+L1_p232_032.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+L1_p232_117.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+L1_p232_160.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+L1_p232_267.wav"></audio></td>
+      </tr>
+   <tr>
+        <td class="tg-pcvp">DBCCRN with SI-SNR+EC loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+EC_p232_005.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+EC_p232_032.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+EC_p232_117.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+EC_p232_160.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+EC_p232_267.wav"></audio></td>
+      </tr>
+    <tr>
+        <td class="tg-pcvp">DBCCRN with SA-SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SA_p232_005.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SA_p232_032.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SA_p232_117.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SA_p232_160.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SA_p232_267.wav"></audio></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr style="height:1px;border:none;border-top:1px solid #555555; width:130%">
+  <h2>p257(original version)</h2>
+  <table class="tg" style="undefined;table-layout: fixed; width: 493px">
+    <colgroup>
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="tg-c3ow"> </th>
+        <th class="tg-c3ow">p257_008</th>
+        <th class="tg-c3ow">p257_013</th>
+        <th class="tg-c3ow">p257_143</th>
+        <th class="tg-c3ow">p257_154</th>
+        <th class="tg-c3ow">p257_383.wav</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-pcvp">Noisy</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/noisy/p257_008.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/noisy/p257_013.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/noisy/p257_143.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/noisy/p257_154.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/noisy/p257_383.wav"></audio></td>
+      </tr>
+       <tr>
+        <td class="tg-pcvp">Clean</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/clean/p257_008.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/clean/p257_013.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/clean/p257_143.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/clean/p257_154.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/clean/p257_383.wav"></audio></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="tg" style="undefined;table-layout: fixed; width: 493px">
+<h2>DCCRN-p257</h2>
+    <colgroup>
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="tg-c3ow">Model </th>
+        <th class="tg-c3ow">p257_008</th>
+        <th class="tg-c3ow">p257_013</th>
+        <th class="tg-c3ow">p257_143</th>
+        <th class="tg-c3ow">p257_154</th>
+        <th class="tg-c3ow">p257_383.wav</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-pcvp">DCCRN with SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SNR_p257_008.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SNR_p257_013.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SNR_p257_143.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SNR_p257_154.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SNR_p257_383.wav"></audio></td>
+      </tr>
+    <tr>
+        <td class="tg-pcvp">DCCRN with SI-SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI_p257_008.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI_p257_013.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI_p257_143.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI_p257_154.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI_p257_383.wav"></audio></td>
+      </tr>
+   <tr>
+        <td class="tg-pcvp">DCCRN with OSI-SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_OSI_p257_008.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_OSI_p257_013.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_OSI_p257_143.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_OSI_p257_154.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_OSI_p257_383.wav"></audio></td>
+      </tr>
+   <tr>
+        <td class="tg-pcvp">DCCRN with SI-SNR+L1 loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+L1_p257_008.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+L1_p257_013.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+L1_p257_143.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+L1_p257_154.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+L1_p257_383.wav"></audio></td>
+      </tr>
+   <tr>
+        <td class="tg-pcvp">DCCRN with SI-SNR+EC loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+EC_p257_008.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+EC_p257_013.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+EC_p257_143.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+EC_p257_154.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SI+EC_p257_383.wav"></audio></td>
+      </tr>
+    <tr>
+        <td class="tg-pcvp">DCCRN with SA-SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SA_p257_008.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SA_p257_013.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SA_p257_143.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SA_p257_154.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DCCRN/DCCRN_SA_p257_383.wav"></audio></td>
+      </tr>
+    </tbody>
+  </table>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 493px">
+<h2>DBCCRN-p257</h2>
+    <colgroup>
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+      <col style="width: 300px">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="tg-c3ow">Model </th>
+        <th class="tg-c3ow">p257_008</th>
+        <th class="tg-c3ow">p257_013</th>
+        <th class="tg-c3ow">p257_143</th>
+        <th class="tg-c3ow">p257_154</th>
+        <th class="tg-c3ow">p257_383.wav</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-pcvp">DBCCRN with SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SNR_p257_008.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SNR_p257_013.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SNR_p257_143.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SNR_p257_154.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SNR_p257_383.wav"></audio></td>
+      </tr>
+    <tr>
+        <td class="tg-pcvp">DBCCRN with SI-SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI_p257_008.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI_p257_013.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI_p257_143.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI_p257_154.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI_p257_383.wav"></audio></td>
+      </tr>
+   <tr>
+        <td class="tg-pcvp">DBCCRN with OSI-SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_OSI_p257_008.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_OSI_p257_013.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_OSI_p257_143.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_OSI_p257_154.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_OSI_p257_383.wav"></audio></td>
+      </tr>
+   <tr>
+        <td class="tg-pcvp">DBCCRN with SI-SNR+L1 loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+L1_p257_008.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+L1_p257_013.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+L1_p257_143.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+L1_p257_154.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+L1_p257_383.wav"></audio></td>
+      </tr>
+   <tr>
+        <td class="tg-pcvp">DBCCRN with SI-SNR+EC loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+EC_p257_008.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+EC_p257_013.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+EC_p257_143.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+EC_p257_154.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SI+EC_p257_383.wav"></audio></td>
+      </tr>
+    <tr>
+        <td class="tg-pcvp">DBCCRN with SA-SNR loss</td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SA_p257_008.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SA_p257_013.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SA_p257_143.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SA_p257_154.wav"></audio></td>
+        <td class="tg-ihkz"><audio controls="">
+            <source src="./audio_samples/original/DBCCRN/DBCCRN_SA_p257_383.wav"></audio></td>
+      </tr>
+    </tbody>
+  </table>
+  <hr style="height:1px;border:none;border-top:1px solid #555555; width:130%">
